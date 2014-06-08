@@ -1,0 +1,24 @@
+body {
+	 background-image: url(../images/knitting250px.png);
+}
+
+.jumbotron {
+	margin-top:50px;
+}
+
+.jumbotron, .section, .links{
+	background: #fff;
+}
+
+.rounded {
+	border-radius: 5px;
+}
+
+.section {
+	padding: 20px;
+}
+
+.links {
+	padding:10px;
+	margin-top: 30px;
+}

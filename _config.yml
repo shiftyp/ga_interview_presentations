@@ -1,9 +1,9 @@
 # Site settings
-title: Interview Presentations
+title: GA Interview Presentations
 email: lynch.r.j@gmail.com
 description: "A series of presentations for an interview at GA"
-baseurl: "/interview_presentations"
-url: "http://shiftyp.github.io/interview_presentations"
+baseurl: "/ga_interview_presentations"
+url: "http://shiftyp.github.io/ga_interview_presentations"
 
 # Build settings
 markdown: kramdown

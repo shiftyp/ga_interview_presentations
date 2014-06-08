@@ -1,6 +1,7 @@
 ---
 layout: default
 styles: /css/what-is-this.css
+title: What is this?
 ---
 <span class="nav_message">Use enter to navigate forward, left arrow for previous.</span>
 <div id="impress">
@@ -26,15 +27,19 @@ styles: /css/what-is-this.css
 	<div id="global_this" class="step" data-x="6000" data-y="3000">
 		<div class="slide">
 			<h2><span class="this">this</span> in the global scope</h2>
+			<div class="invisible">
 			<ul><li>JavaScript:</li></ul>
 {% highlight javascript %}
 console.log('What is this?:', this.toString());
 {% endhighlight %}
-			<ul><li>Output:</li></ul>
+			</div>
+			<div class="invisible">
+				<ul><li>Output:</li></ul>
 {% highlight bash %}
 What is this?: [object Window]
 {% endhighlight %}
-			<ul><li>In the global scope, <span class="this">this</span> is always the window.</li></ul>
+				<ul><li>In the global scope, <span class="this">this</span> is always the window.</li></ul>
+			</div>
 		</div>
 	</div>
 	<div id="function_this" class="step" data-x="9000" data-y="3000">

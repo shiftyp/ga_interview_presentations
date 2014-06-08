@@ -4,13 +4,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Interview Presentations</title>
+	<title>What is this?</title>
 	<meta name="viewport" content="width=device-width">
 	<meta name="description" content="A series of presentations for an interview at GA">
-	<link rel="canonical" href="http://shiftyp.github.io/interview_presentations/interview_presentations/what-is-this/">
+	<link rel="canonical" href="http://shiftyp.github.io/ga_interview_presentations/ga_interview_presentations/what-is-this/">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/interview_presentations/css/solarized-light.css">
-	<link rel="stylesheet" href="/interview_presentations/css/what-is-this.css">
+	<link rel="stylesheet" href="/ga_interview_presentations/css/solarized-light.css">
+	<link rel="stylesheet" href="/ga_interview_presentations/css/what-is-this.css">
 </head>
 
 
@@ -39,11 +39,15 @@
 	<div id="global_this" class="step" data-x="6000" data-y="3000">
 		<div class="slide">
 			<h2><span class="this">this</span> in the global scope</h2>
+			<div class="invisible">
 			<ul><li>JavaScript:</li></ul>
 <div class="highlight"><pre><code class="javascript"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;What is this?:&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span></code></pre></div>
-			<ul><li>Output:</li></ul>
+			</div>
+			<div class="invisible">
+				<ul><li>Output:</li></ul>
 <div class="highlight"><pre><code class="bash">What is this?: <span class="o">[</span>object Window<span class="o">]</span></code></pre></div>
-			<ul><li>In the global scope, <span class="this">this</span> is always the window.</li></ul>
+				<ul><li>In the global scope, <span class="this">this</span> is always the window.</li></ul>
+			</div>
 		</div>
 	</div>
 	<div id="function_this" class="step" data-x="9000" data-y="3000">
