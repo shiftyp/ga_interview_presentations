@@ -7,6 +7,10 @@ a {
 	color: #2aa198;
 }
 
+a:hover {
+	color: #327873;
+}
+
 .btn-primary {
 	background-color: #2aa198;
 	border: 1px solid #327873;
@@ -35,8 +39,8 @@ a {
 	color: #859900;
 }
 
-.jumbotron .heart {
-	color: #faa;
+.power {
+	color: #dd0;
 	display: block;
 	float: right;
 }
