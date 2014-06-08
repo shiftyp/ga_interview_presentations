@@ -1,0 +1,252 @@
+---
+layout: default
+styles: /css/what-is-the-internet.css
+---
+<span class="nav_message">Use enter to navigate forward, left arrow for previous.</span>
+<div id="impress">
+	<div id="start" class="step">
+		<div class="slide">
+			<h2>What is the internet?</h2>
+			<ul>
+				<li class="invisible">The internet is old, maybe older than you think.</li>
+				<li class="invisible">The internet started out as a Department of Defense project called ARPANET in 1969.</li>
+				<li class="invisible">What most people think of as the internet is a portion of it called the World Wide Web.</li>
+				<li class="invisible">The Web came about in the late 1980s and early 1990s.
+				<li class="invisible">The Web created a graphical interface to the internet, and the website was born.</li>
+				<li class="invisible">The web and internet still function much the same way today.</li>
+			</ul>
+		</div>
+	</div>
+	<div id="servers_and_clients" class="step" data-x="3000">
+		<div class="slide">
+			<h2>Servers and Clients</h2>
+			<ul>
+				<li class="invisible">The internet is a complex system, but from our standpoint it has two basic components.
+					<ul>
+						<li class="invisible">Clients which make requests.</li>
+						<li class="invisible">Servers which respond to requests.</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="servers" class="step" data-x="6000">
+		<div class="slide">
+			<h2>Servers</h2>
+			<ul>
+				<li class="invisible">In web development we often refer to servers as the "backend" of an application.</li>
+				<li class="invisible">Servers are computers or programs that respond to requests from clients, and return a result.</li>
+				<li class="invisible">This result can contain anything from a website, to a file, to raw data.</li>
+				<li class="invisible">In the early internet there were just four computers that acted as servers.</li>
+				<li class="invisible">It's hard to guess how many servers there are today, but in 2012 there were 634 Million websites.</li>
+			</ul>
+		</div>
+	</div>
+	<div id="clients" class="step" data-x="9000">
+		<div class="slide">
+			<h2>Clients</h2>
+			<ul>
+				<li class="invisible">In web development we often refer to clients as the "frontend" of the application.</li>
+				<li class="invisible">For our purposes, the client can refer to the computer, the browser, or the code that runs on the browser.</li>
+				<li class="invisible">It's really hard to guess how many clients there are today, but in 2012 there were an estimated 2.5 Billion internet users.</li>
+			</ul>
+		</div>
+	</div>
+	<div id="tcpip" class="step" data-x="12000">
+		<div class="slide">
+			<h2>Addressing Servers and Clients</h2>
+			<ul>
+				<li class="invisible">Clients and servers interact through protocols.</li>
+				<li class="invisible">The basic protocols for the internet are called TCP/IP.</li>
+				<li class="invisible">Servers and clients are refered to using numerical "IP" addresses.</li>
+				<li class="invisible">We rarely use these for servers, because there are special servers that act as phone books called "Domain Name Servers".</li>
+			 	<li class="invisible">These allow us to use human readable "Domain Names".</li>
+				<li class="invisible"><pre>74.125.228.69 -> google.com</pre></li>
+			</ul>
+		</div>
+	</div>
+	<div id="http" class="step" data-x="15000">
+		<div class="slide">
+			<h2>HyperText Transfer Protocol</h2>
+			<ul>
+				<li class="invisible">The Web has it's own protocol, called HyperText Transfer Protocol or HTTP.</li>
+				<li class="invisible">This defines the system of requests and responses that allow web clients and servers to interact.</li>
+				<li class="invisible">There are several types of requests, but the basic ones are called GET and POST.
+					<ul>
+						<li class="invisible">A GET is used to request websites, files, and data.</li>
+						<li class="invisible">A POST is used to return some data to the server.</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="anatomy_of_a_request" class="step" data-x="18000">
+		<div class="slide">
+			<h2>Anatomy of a Request and Response</h2>
+			<ul>
+				<li class="invisible">Requests and responses consist of headers and a body.</li>
+				<li class="invisible">The headers contain information that say how to handle the request / response.
+					<ul>
+						<li class="invisible">host</li>
+						<li class="invisible">status</li>
+						<li class="invisible">method</li>
+					</ul>
+				</li>
+				<li class="invisible">The body contains the website, file, or data to be transferred.</li>
+			</ul>
+		</div>
+	</div>
+	<div id="web_browsers" class="step" data-x="21000">
+		<div class="slide">
+			<h2>Web Browsers</h2>
+			<ul>
+				<li class="invisible">Web Browsers are the type of clients we are concerned about in frontend development.</li>
+				<li class="invisible">They are programs that make requests and visually render the resulting data.</li>
+				<li class="invisible">In addition to files, there are langauges used by websites to render this data.
+					<ul>
+						<li class="invisible">HyperText Markup Language (HTML).</li>
+						<li class="invisible">Cascading Style Sheets (CSS).</li>
+						<li class="invisible">JavaScript.</li>
+					</ul>
+					</li>
+					<li class="invisible">How these langauges are handled depends greatly on the browser.</li>
+					<li class="invisible">There are standards for these languages, but they aren't always followed.</li>
+				<li class="invisible">Browsers can also natively parse additional languages used to transfer data and images.</li>
+					<ul>
+						<li class="invisible">JavaScript Object Notation (JSON).</li>
+						<li class="invisible">Extensible Markup Language (XML).</li>
+						<li class="invisible">Scalable Vector Graphics (SVG).</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="html" class="step" data-x="24000">
+		<div class="slide">
+			<h2>HTML</h2>
+			<ul>
+				<li class="invisible">HTML defines "elements" and tells the browser how to lay them out in a webpage.</li>
+				<li class="invisible">The current standard for HTML is called HTML5.</li>
+				<li class="invisible">It consists of "tags", "attributes", and "values".</li>
+				<li class="invisible">
+{% highlight html %}
+<div id="servers_and_clients" class="step" data-x="3000">
+  <div class="slide">
+    <h2>Servers and Clients</h2>
+    <ul>
+      <li class="invisible">The internet is a complex system, but from our standpoint it has two basic components.
+        <ul>
+          <li class="invisible">Clients which make requests.</li>
+          <li class="invisible">Servers which respond to requests.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endhighlight %}
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="css" class="step" data-x="27000">
+		<div class="slide">
+			<h2>CSS</h2>
+			<ul>
+				<li class="invisible">CSS defines "rules" that tell the browser how to style the HTML elements.</li>
+				<li class="invisible">The current standard for CSS is called CSS3.</li>
+				<li class="invisible">These rules consist of "declaration blocks", "declarations", "selectors", "properties", and "values".</li>
+				<li class="invisible">
+{% highlight css %}
+body {
+  background-image: url(../images/random_grey_variations.png);
+  color: #fff;
+}
+
+.nav_message {
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-family: Consolas, monospace;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.slide {
+  width: 1000px;
+  font-size: 25px;
+}
+{% endhighlight %}
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="javascript" class="step" data-x="30000">
+		<div class="slide">
+			<h2>JavaScript</h2>
+			<ul>
+				<li class="invisible">JavaScript is a programming language, and it allows us to modify the state of the page to do a number of things.</li>
+				<li class="invisible">The current standard for JavaScript is called ES5.1.</li>
+				<li class="invisible">JavaScript is more complex than HTML and CSS, but some of its components are:
+					<ul class="invisible">
+						<li>variables</li>
+						<li>functions</li>
+						<li>objects</li>
+					</ul>
+				</li>
+				<li class="invisible">
+{% highlight javascript %}
+!function(){
+  var step = null;
+
+  $('#impress').on('impress:stepenter', function(e){
+    step = $(e.target);
+  })
+
+  $(window).on('keypress', function(e){
+    if(e.which === 13){
+      var elements = step.find('.invisible');
+      if(elements.length)
+        elements.eq(0).toggleClass('invisible', false).hide().fadeIn(1000);
+      else
+        api.next();
+    }
+  });
+
+  var api = impress();
+  api.init();
+}();
+
+{% endhighlight %}
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="next_steps" class="step" data-x="33000">
+		<div class="slide">
+			<h2>Questions?</h2>
+		</div>
+	</div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.js" type="text/javascript"></script>
+<script type="text/javascript">
+	!function(){
+		var step = null;
+
+		$('#impress').on('impress:stepenter', function(e){
+			step = $(e.target);
+		})
+
+		$(window).on('keypress', function(e){
+			if(e.which === 13){
+				var elements = step.find('.invisible');
+				if(elements.length)
+					elements.eq(0).toggleClass('invisible', false).hide().fadeIn(1000);
+				else
+					api.next();
+			}
+		});
+
+		var api = impress();
+		api.init();
+	}();
+</script>

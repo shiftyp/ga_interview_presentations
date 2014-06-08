@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Interview Presentations</title>
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="A series of presentations for an interview at GA">
+	<link rel="canonical" href="http://shiftyp.github.io/interview_presentations/interview_presentations/what-is-this/">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/interview_presentations/css/solarized-light.css">
+	<link rel="stylesheet" href="/interview_presentations/css/what-is-this.css">
+</head>
+
+
+	<body>
+		<span class="nav_message">Use enter to navigate forward, left arrow for previous.</span>
+<div id="impress">
+	<div id="start" class="step">
+		<div class="slide">
+			<div class="really_big">{</div><div class="big">Scope In JavaScript</div><div class="really_big">}</div>
+		</div>
+	</div>
+	<div id="what_is_this" class="step" data-x="3000"> 
+		<div class="slide">
+			What is <span class="this">this</span>?
+		</div>
+	</div>
+	<div id="what_is_this_cont" class="step" data-x="3000" data-y="3000">
+		<div class="slide">
+			<h2>What is <span class="this">this</span>?</h2>
+			<ul>
+				<li class="invisible"><span class="this">this</span> is a keyword and a special variable in JavaScript.</li>
+				<li class="invisible">It references an object called the "execution context" of the current scope.</li>
+			</ul>
+		</div>
+	</div>
+	<div id="global_this" class="step" data-x="6000" data-y="3000">
+		<div class="slide">
+			<h2><span class="this">this</span> in the global scope</h2>
+			<ul><li>JavaScript:</li></ul>
+<div class="highlight"><pre><code class="javascript"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;What is this?:&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span></code></pre></div>
+			<ul><li>Output:</li></ul>
+<div class="highlight"><pre><code class="bash">What is this?: <span class="o">[</span>object Window<span class="o">]</span></code></pre></div>
+			<ul><li>In the global scope, <span class="this">this</span> is always the window.</li></ul>
+		</div>
+	</div>
+	<div id="function_this" class="step" data-x="9000" data-y="3000">
+		<div class="slide">
+			<h2><span class="this">this</span> in a function scope</h2>
+			<div class="invisible">
+				<ul><li>JavaScript:</li></ul>
+<div class="highlight"><pre><code class="javascript"><span class="kd">function</span> <span class="nx">myFunc</span><span class="p">(){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;What is this?:&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="nx">myFunc</span><span class="p">();</span></code></pre></div>
+			</div>
+			<div class="invisible">
+				<ul><li>Output:</li></ul>
+<div class="highlight"><pre><code class="bash">What is this?: <span class="o">[</span>object Window<span class="o">]</span></code></pre></div>
+				<ul><li>In a function scope, <span class="this">this</span> is the window by default.</li></ul>
+			</div>
+		</div>
+	</div>
+	<div id="event_handler_this" class="step" data-x="12000" data-y="3000">
+		<div class="slide">
+			<h2><span class="this">this</span> in an event handler</h2>
+			<div class="invisible">
+				<ul><li>HTML:</li></ul>
+<div class="highlight"><pre><code class="javascript"><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;my_div&quot;</span><span class="o">&gt;</span><span class="nx">Click</span> <span class="nx">Me</span><span class="o">!&lt;</span><span class="err">/div&gt;</span></code></pre></div>
+				<ul><li>JavaScript:</li></ul>
+<div class="highlight"><pre><code class="javascript"><span class="kd">function</span> <span class="nx">myFunc</span><span class="p">(){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;What is this?:&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;my_div&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">myFunc</span><span class="p">);</span></code></pre></div>
+			</div>
+			<div class="invisible">
+				<ul><li>Output on click:</li></ul>
+<div class="highlight"><pre><code class="bash">What is this?: <span class="o">[</span>object HTMLDivElement<span class="o">]</span></code></pre></div>
+				<ul><li>In the scope of a function invoked as an event handler, <span class="this">this</span> is always the event target.</li></ul>
+		</div>
+	</div>
+</div>
+	<div id="method_this" class="step" data-x="15000" data-y="3000">
+		<div class="slide">
+			<h2><span class="this">this</span> in an object method</h2>
+			<div class="invisible">
+				<ul><li>JavaScript:</li></ul>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">myObj</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">name</span> <span class="o">:</span> <span class="s1">&#39;myObj&#39;</span><span class="p">,</span>
+
+  <span class="nx">myMethod</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;What is this?:&#39;</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">myObj</span><span class="p">.</span><span class="nx">myMethod</span><span class="p">();</span></code></pre></div>
+		</div>
+		<div class="invisible">
+			<ul><li>Output:</li></ul>
+<div class="highlight"><pre><code class="bash">What is this?: <span class="o">{</span><span class="s2">&quot;name&quot;</span>:<span class="s2">&quot;myObj&quot;</span><span class="o">}</span></code></pre></div>
+				<ul><li>When a function is invoked as a property on an object, <span class="this">this</span> is always the object.</li></ul>
+			</div>
+		</div>
+	</div>
+	<div id="method_this_gotcha" class="step" data-x="18000" data-y="3000">
+		<div class="slide">
+			<h2>The dot is important</h2>
+			<ul class="invisible">
+				<li>If the function is defined as a property, but isn't called as a property, then <span class="this">this</span> will not be the object.</li>
+			</ul>
+			<div class="invisible">
+				<ul><li>JavaScript:</li></ul>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">myObj</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">name</span> <span class="o">:</span> <span class="s1">&#39;myObj&#39;</span><span class="p">,</span>
+
+  <span class="nx">myMethod</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(){</span> 
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;What is this?:&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">myOtherRef</span> <span class="o">=</span> <span class="nx">myObj</span><span class="p">.</span><span class="nx">myMethod</span><span class="p">();</span>
+<span class="nx">myOtherRef</span><span class="p">();</span></code></pre></div>
+			</div>
+			<div class="invisible">
+				<ul><li>Output:</li></ul>
+<div class="highlight"><pre><code class="bash">What is this?: <span class="o">[</span>object Window<span class="o">]</span></code></pre></div>
+			</div>
+		</div>
+	</div>
+	<div id="nested_this" class="step" data-x="21000" data-y="3000">
+		<div class="slide">
+			<h2><span class="this">this</span> in a nested function</h2>
+			<ul class="invisible"><li>Is <span class="this">this</span> the same in a function inside a function?</li></ul>
+			<div class="invisible">
+				<ul><li>JavaScript:</li></ul>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">myObj</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">myMethod</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(){</span> 
+    <span class="kd">function</span> <span class="nx">myNestedFunc</span><span class="p">(){</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;What is this (nested)?:&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+    <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;What is this?:&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+    <span class="nx">myNestedFunc</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">myObj</span><span class="p">.</span><span class="nx">myMethod</span><span class="p">();</span></code></pre></div>
+			</div>
+			<div class="invisible">
+				<ul><li>Output:</li></ul>
+<div class="highlight"><pre><code class="bash">What is this?: <span class="o">[</span>object Object<span class="o">]</span>
+What is this <span class="o">(</span>nested<span class="o">)</span>?: <span class="o">[</span>object Window<span class="o">]</span></code></pre></div>
+				<ul><li>Each function has its own scope, and its own <span class="this">this</span>.</li></ul>
+			</div>
+		</div>
+	</div>
+	<div id="call_and_apply" class="step" data-x="24000" data-y="3000">
+		<div class="slide">
+			<h2>Specifying <span class="this">this</span> with call and apply</h2>
+			<ul>
+				<li class="invisible"><span class="this">this</span> is determined by how the function is called.</li>
+				<li class="invisible">Using the function's call and apply methods, it is possible to specify <span class="this">this</span>.</li>
+			</ul>
+			<div class="invisible">
+				<ul><li>JavaScript:</li></ul>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">myObj</span> <span class="o">=</span> <span class="p">{};</span>
+
+<span class="kd">function</span> <span class="nx">myFunc</span><span class="p">(){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;What is this?:&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="nx">myFunc</span><span class="p">();</span>
+<span class="nx">myFunc</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">myObj</span><span class="p">);</span>
+<span class="nx">myFunc</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">myObj</span><span class="p">);</span></code></pre></div>
+			</div>
+			<div class="invisible">
+				<ul><li>Output:</li></ul>
+<div class="highlight"><pre><code class="bash">What is this?: <span class="o">[</span>object Window<span class="o">]</span>
+What is this?: <span class="o">[</span>object Object<span class="o">]</span>
+What is this?: <span class="o">[</span>object Object<span class="o">]</span></code></pre></div>
+			</div>
+		</div>
+	</div>
+	<div id="uses_of_call_and_apply" class="step" data-x="27000" data-y="3000">
+		<div class="slide">
+			<h2>When to use call and apply</h2>
+			<ul>
+				<li class="invisible">call and apply both take <span class="this">this</span> as the first argument</li>
+				<li class="invisible">call and apply differ in how they pass arguments to the invoked function.
+					<ul>
+						<li class="invisible">call passes along arguments as they are passed to it.</li>
+						<li class="invisible">apply takes an array of arguments.</li>
+					</ul>
+				</li>
+				<li class="invisible">There are two main reasons to use call and apply.
+					<ul>
+						<li class="invisible">To change <span class="this">this</span>.</li>
+						<li class="invisible">To preserve <span class="this">this</span>.</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="this_is_annoying" class="step" data-x="30000" data-y="3000">
+		<div class="slide">
+			<h2><span class="this">this</span> is annoying...</h2>
+			<ul>
+				<li class="invisible">Keeping track of <span class="this">this</span> can be a pain.</li>
+				<li class="invisible">The fact that <span class="this">this</span> changes is essential to how JavaScript works.</li>
+				<li class="invisible">Prototypal inheritence works because the browser calls prototype methods on other objects.</li>
+			</ul>
+			<div class="invisible">
+				<ul><li>JavaScript:</li></ul>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">myArr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;myArr: &#39;</span><span class="p">,</span> <span class="nx">myArr</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">));</span>
+<span class="c1">// Is the same as:</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;myArr: &#39;</span><span class="p">,</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">join</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">myArr</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">));</span></code></pre></div>
+			</div>
+			<div class="invisible">
+				<ul><li>Output:</li></ul>
+<div class="highlight"><pre><code class="bash">myArr: 1,2,3
+myArr: 1,2,3</code></pre></div>
+			</div>
+		</div>
+	</div>
+	<div id="practical_call_and_apply_2" class="step" data-x="33000" data-y="3000">
+		<div class="slide">
+			<h2>A practical use of call and apply</h2>
+			<ul class="invisible"><li>Lets say you want to extend the regular console logging to prepend a date string.</li></ul>
+			<div class="invisible">
+				<ul><li>JavaScript:</li></ul>
+<div class="highlight"><pre><code class="javascript"><span class="kd">function</span> <span class="nx">myLogger</span><span class="p">(){</span>
+  <span class="c1">// Changing `this`</span>
+  <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">unshift</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">toDateString</span><span class="p">());</span>
+  <span class="c1">// Preserving `this`</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">console</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">myLogger</span><span class="p">(</span><span class="s1">&#39;Wow, it works!&#39;</span><span class="p">);</span></code></pre></div>
+			</div>
+			<div class="invisible">
+				<ul><li>Output:</li></ul>
+<div class="highlight"><pre><code class="bash">Wed Jun 04 2014 Wow, it works!</code></pre></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.js" type="text/javascript"></script>
+<script type="text/javascript">
+	!function(){
+		var step = null;
+
+		$('#impress').on('impress:stepenter', function(){
+			step = $(event.target);
+		})
+
+		$(window).on('keypress', function(e){
+				if(e.which === 13){
+					var elements = step.find('.invisible');
+				if(elements.length)
+					elements.eq(0).toggleClass('invisible', false).hide().fadeIn(1000);
+				else
+					api.next();
+			}
+		});
+		var api = impress();
+		api.init();
+	}();
+</script>
+
+	</body>
+</html>
+
