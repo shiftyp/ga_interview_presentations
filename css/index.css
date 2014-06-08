@@ -1,13 +1,49 @@
 body {
 	 background-image: url(../images/knitting250px.png);
+	 text-shadow: 1px 1px 1px #ccc;
+}
+
+a {
+	color: #2aa198;
+}
+
+.btn-primary {
+	background-color: #2aa198;
+	border: 1px solid #327873;
+}
+
+.btn-primary:hover, .btn-primary:active {
+	background-color: #327873;
 }
 
 .jumbotron {
-	margin-top:50px;
+	margin-top: 50px;
+}
+
+.jumbotron .title {
+	font-size: 80px;
+	width: 845px;
+	margin-left: -20px;
+	font-family: Consolas, monospace;
+}
+
+.knowledge {
+	color: #2aa198;
+}
+
+.equals {
+	color: #859900;
+}
+
+.jumbotron .heart {
+	color: #faa;
+	display: block;
+	float: right;
 }
 
 .jumbotron, .section, .links{
-	background: #fff;
+	background: rgba(255, 255, 255, 0.5);
+	border: 1px solid #ccc;
 }
 
 .rounded {
