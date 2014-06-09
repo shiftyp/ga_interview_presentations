@@ -1,0 +1,230 @@
+---
+layout: default
+styles: /css/what-is-javascript.css
+title: What is JavaScript?
+---
+<span class="nav_message">Use enter to navigate forward, left arrow for previous.</span>
+<div id="impress">
+	<div id="start" class="step">
+		<div class="slide">
+			<h2>What is JavaScript?</h2>
+			<ul>
+				<li class="invisible">JavaScript is a programming language.</li>
+				<li class="invisible">It is executed in the browser in the context of a web page.</li>
+				<li class="invisible">It's awesome.</li>
+			</ul>
+		</div>
+	</div>
+	<div id="compare_language" class="step" data-x="3000">
+		<div class="slide">
+			<h2>JavaScript is like a Written Language</h2>
+			<ul>
+				<li class="invisible">It has grammatical rules called syntax.</li>
+				<li class="invisible">It has constructs like clauses, sentences, and paragraphs called expressions, statements, and blocks.</li>
+				<li class="invisible">It is read or interpreted one construct at a time.</li>
+				<li class="invisible">It has verbs, adjectives, and nouns which can be keywords, operators, constants, or variables.</li>
+				<li class="invisible">It has punctuation and symbols that change the meaning of expressions.</li>
+				<li class="invisible">It can be used to reference abstract constructs.</li>
+				<li class="invisible">It has changed over time to better describe it's environment.</li>
+				<li class="invisible">If you don't know it, it's hard to read it.</li>
+				<li class="invisible">It can be translated into plain English.</li>
+			</ul>
+		</div>
+	</div>
+	<div id="contrast_language" class="step" data-x="6000">
+		<div class="slide">
+			<h2>JavaScript is also Unique</h2>
+			<ul>
+				<li class="invisible">All expressions are imperatives.</li>
+				<li class="invisible">A poem in JavaScript is a haiku, not an epic.</li>
+				<li class="invisible">JavaScript is a language of logic, and can describe it in a very succinct way.</li>
+				<li class="invisible">JavaScript relies heavily on symbols.</li>
+				<li class="invisible">In JavaScript, you can write something that is valid, but almost unintelligable.</li>
+				<li class="invisible">In JavaScript we don't just describe things, we can create things.</li>
+				<li class="invisible">There are literals; which don't reference a thing, but actually <i>are</i> the thing.</li>
+				<li class="invisible">Control flow makes a JavaScript program like a choose your own adventure novel.</li>
+			</ul>
+		</div>
+	</div>
+	<div id="expressions" class="step" data-x="12000">
+		<div class="slide">
+			<h2>Expressions and Operators</h2>
+			<ul>
+				<li class="invisible">An expression is a bit of code that produces a value.</li>
+				<li class="invisible">Values come in many of types, but the basic ones are called primitives.
+					<ul>
+						<li class="invisible">number (integer and floating point)</li>
+						<li class="invisible">string</li>
+						<li class="invisible">boolean</li>
+						<li class="invisible">null</li>
+						<li class="invisible">undefined</li>
+					</ul>
+				</li>
+				<li class="invisible">Operators are special symbols or words that indicate some action.</li>
+				<li class="invisible">Some of them are used in expressions to determine a value.</li>
+			</ul>
+		</div>
+	</div>
+	<div id="number_expressions" class="step" data-x="15000">
+		<div class="slide">
+			<h2>Some Simple Expressions with numbers.</h2>
+			<ul>
+				<li class="invisible">A number in javascript can be an integer (a whole number) or a float (a number with a decimal point).</li>
+				<li class="invisible">The basic operators that act on numbers are the plus ( + ), multiplication ( * ), subtraction ( - ) and division ( / ) operators.</li>
+				<li class="invisible">The following expressions make use of numbers and the plus operator.</li>
+				<li class="invisible">
+{% highlight javascript %}
+// An integer value: 1
+1
+{% endhighlight %}
+				</li>
+				<li class="invisible">
+{% highlight javascript %}
+// Also an integer value: 2
+1 + 1
+{% endhighlight %}
+				</li>
+				<li class="invisible">
+{% highlight javascript %}
+// A floating point value: 0.1
+0.1
+{% endhighlight %}
+				</li>
+				<li class="invisible">
+{% highlight javascript %}
+// Also a floating point value: 1.1
+0.1 + 1
+{% endhighlight %}
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="string_expressions" class="step" data-x="18000">
+		<div class="slide">
+			<h2>Some Simple Expressions with strings.</h2>
+			<ul>
+				<li class="invisible">A string is a value which represents text.</li>
+				<li class="invisible">Strings are distinguished from code using single or double quotes.</li>
+				<li class="invisible">We can combine or "concatenate" strings using the plus ( + ) operator.</li>
+				<li class="invisible">
+{% highlight javascript %}
+// A String value: Hello World!
+'Hello World!'
+{% endhighlight %}
+				</li>
+				<li class="invisible">
+{% highlight javascript %}
+// Also a string value: Hello World!
+'Hello ' + 'World!'
+{% endhighlight %}
+				</li>
+				<li class="invisible">
+{% highlight javascript %}
+// Also String value: 1
+"1"
+{% endhighlight %}
+				</li>
+				<li class="invisible">
+{% highlight javascript %}
+// Also a string value: 1 is the loneliest number...
+1 + ' is the loneliest number';
+{% endhighlight %}
+			</ul>
+		</div>
+	</div>
+	<div id="bool_expressions" class="step" data-x="21000">
+		<div class="slide">
+			<h2>Some Simple Expressions with booleans.</h2>
+			<ul>
+				<li class="invisible">A boolean has two possible values, true and false.</li>
+				<li class="invisible">We use booleans all over the place for determining what to do in different situations.</li>
+				<li class="invisible">We can combine booleans using the "or" ( || ) and "and" ( &amp;&amp; ) operators.</li>
+				<li class="invisible">We can reverse the value of a boolean by using the not ( ! ) operator.</li>
+				<li class="invisible">
+{% highlight javascript %}
+// A boolean value: true
+true
+{% endhighlight %}
+				</li>
+				<li class="invisible">
+{% highlight javascript %}
+// Also a boolean value: true
+true || false
+{% endhighlight %}
+				</li>
+				<li class="invisible">
+{% highlight javascript %}
+// Also a boolean value: false
+true && false
+{% endhighlight %}
+				</li>
+				<li class="invisible">
+{% highlight javascript %}
+// Also a boolean value: false
+!true
+{% endhighlight %}
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="null_expressions" class="step" data-x="24000">
+		<div class="slide">
+			<h2>A Simple Expression with null</h2>
+			<ul>
+				<li class="invisible">null is a value that is sort of the opposite of every other value.</li>
+				<li class="invisible">We often use null to indicate that the value for something doesn't exist.</li>
+				<li class="invisible">
+{% highlight javascript %}
+// A null value (this is all you get for now).
+null
+{% endhighlight %}
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="undefined_expressions" class="step" data-x="27000">
+		<div class="slide">
+			<h2>A Simple Expression with undefined</h2>
+			<ul>
+				<li class="invisible">undefined is the absence of a value.</li>
+				<li class="invisible">It's different from null, since null is actually a type of value.</li>
+				<li class="invisible">Things that are undefined are often the source of errors.</li>
+				<li class="invisible">
+{% highlight javascript %}
+// undefined (this is all you get for now).
+undefined
+{% endhighlight %}
+				</li>
+			</ul>
+		</div>
+	</div>	
+	<div id="questions" class="step" data-x="30000">
+		<div class="slide">
+			<h2>Questions? <a href="../what-is-this">Move on</a>?</h2>
+		</div>
+	</div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.js" type="text/javascript"></script>
+<script type="text/javascript">
+	!function(){
+		var step = null;
+
+		$('#impress').on('impress:stepenter', function(e){
+			step = $(e.target);
+		})
+
+		$(window).on('keypress', function(e){
+			if(e.which === 13){
+				var elements = step.find('.invisible');
+				if(elements.length)
+					elements.eq(0).toggleClass('invisible', false).hide().fadeIn(1000);
+				else
+					api.next();
+			}
+		});
+
+		var api = impress();
+		api.init();
+	}();
+</script>
