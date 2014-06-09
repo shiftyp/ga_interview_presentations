@@ -28,7 +28,7 @@ a:hover {
 
 .container .jumbotron {
 	border-radius: 0px;
-	padding-bottom: 0px;
+	padding-bottom: 30px;
 	padding-top: 30px;
 	border-top: 6px solid #2aa198;
 }
