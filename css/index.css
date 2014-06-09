@@ -1,6 +1,15 @@
+html, body {
+	height: 100%;
+}
+
 body {
-	 background-image: url(../images/knitting250px.png);
-	 text-shadow: 1px 1px 1px #ccc;
+	 background-image: url(../images/retina_wood.png);
+	 text-shadow: 1px 1px 2px #ccc;
+}
+
+.container {
+	height: 100%;
+	background: rgba(255, 255, 255, 0.4);
 }
 
 a {
@@ -20,15 +29,34 @@ a:hover {
 	background-color: #327873;
 }
 
-.jumbotron {
-	margin-top: 50px;
+.container .jumbotron {
+	border-radius: 0px;
+	padding-bottom: 0px;
+}
+
+.jumbotron .btn {
+	float: right;
 }
 
 .jumbotron .title {
 	font-size: 80px;
 	width: 845px;
 	margin-left: -20px;
+	font-weight: bold;
 	font-family: Consolas, monospace;
+}
+
+.circle {
+	float: left;
+	border-radius: 50%;
+	margin-top: -10px;
+	margin-right: 10px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+ 	background: #2aa198;
+	color: #fff;	
 }
 
 .knowledge {
@@ -46,16 +74,18 @@ a:hover {
 }
 
 .jumbotron, .section, .links{
-	background: rgba(255, 255, 255, 0.5);
-	border: 1px solid #ccc;
-}
-
-.rounded {
-	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.4);
 }
 
 .section {
+	border-top: 3px solid #2aa198;
 	padding: 20px;
+	padding-top: 10px;
+}
+
+.section h2 {
+	font-size: 25px;
+	margin-bottom: 20px;
 }
 
 .links {
