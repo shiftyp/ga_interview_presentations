@@ -3,13 +3,16 @@ html, body {
 }
 
 body {
-	 background-image: url(../images/retina_wood.png);
-	 text-shadow: 1px 1px 2px #ccc;
+	background-image: url(../images/retina_wood.png);
+	text-shadow: 1px 1px 2px #ccc;
+	border-top: 30px solid #2aa198;
 }
 
 .container {
-	height: 100%;
-	background: rgba(255, 255, 255, 0.4);
+	position: relative;
+	height: 600px;
+	top: 50%;
+	margin-top: -300px;
 }
 
 a {
@@ -20,18 +23,14 @@ a:hover {
 	color: #327873;
 }
 
-.btn-primary {
-	background-color: #2aa198;
-	border: 1px solid #327873;
-}
-
-.btn-primary:hover, .btn-primary:active {
-	background-color: #327873;
+.ribbon {
 }
 
 .container .jumbotron {
 	border-radius: 0px;
 	padding-bottom: 0px;
+	padding-top: 30px;
+	border-top: 6px solid #2aa198;
 }
 
 .jumbotron .btn {
@@ -39,11 +38,9 @@ a:hover {
 }
 
 .jumbotron .title {
-	font-size: 80px;
-	width: 845px;
-	margin-left: -20px;
+	color: #2aa198;
+	font-size: 70px;
 	font-weight: bold;
-	font-family: Consolas, monospace;
 }
 
 .circle {
@@ -68,7 +65,7 @@ a:hover {
 }
 
 .power {
-	color: #dd0;
+	color: yellow;
 	display: block;
 	float: right;
 }
@@ -78,9 +75,9 @@ a:hover {
 }
 
 .section {
-	border-top: 3px solid #2aa198;
 	padding: 20px;
 	padding-top: 10px;
+	border-top: 3px solid #2aa198;
 }
 
 .section h2 {
@@ -91,4 +88,11 @@ a:hover {
 .links {
 	padding:10px;
 	margin-top: 30px;
+	border-top: 1px solid #2aa198;
+}
+
+.links a {
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
 }
